@@ -1,0 +1,31 @@
+\chapter{Análise de Viabilidade Técnica}
+
+\section{Introdução}
+
+Neste capítulo, discutiremos a viabilidade técnica do desenvolvimento de uma Inteligência Artificial para aprimorar a avaliação individual nas disciplinas de requisitos de software e métodos de desenvolvimento de software na Universidade de Brasília. Exploraremos as tecnologias e ferramentas necessárias para analisar o desempenho dos alunos, e fornecer \textit{feedbacks} formativos.
+
+\section{Objetivos Técnicos}
+
+Os objetivos técnicos deste trabalho refletem em analisar o desempenho dos alunos em avaliações individuais das disciplinas requisitos de software e métodos de desenvolvimento de software, para gerar \textit{feedbacks} formativos por meio de uma inteligência artificial.
+
+Existindo uma comunicação externa à plataforma de aprendizado utilizada nas disciplinas, o Aprender 3, sendo executada por meio de uma API provendo a comunicação entre os dados das avaliações individuais dos alunos e os \textit{feedbacks} formativos relacionados gerados por uma inteligência artificial.
+
+\section{Requisitos da Ferramenta}
+
+A implementação para alcançar o objetivo técnico desejado pode exigir o uso de diversas ferramentas de inteligência artificial e \textit{frameworks}. Algumas considerações incluem:
+
+\begin{itemize}
+  \item Processamento de Linguagem Natural (PLN): para que, após a compreensão e análise de desempenho, possamos gerar \textit{feedback} textual de forma coerente e compreensível.
+  \item Integração com API Externa: considerando a possibilidade de enviar dados para uma API externa que receberá os resultados das avaliações individuais dos estudantes e retornará o \textit{feedback} gerado pela IA.
+\end{itemize}
+
+\section{Tecnologias Idealizadas}
+
+Levando em consideração os requisitos da ferramenta a ser construída, foi planejada a utilização das seguintes tecnologias em cada ambiente:
+
+\begin{itemize}
+  \item PLN: biblioteca NLTK (\textit{Natural Language Toolkit}), SpaCy, modelos de linguagem pré-treinados como BERT e ferramentas da OpenAI, como o modelo GPT (\textit{Generative Pre-trained Transformer}).
+  \item API Externa: utilizar o \textit{framework} FastAPI, para desenvolver uma API em Python que se comunique com o modelo de inteligência artificial.
+\end{itemize}
+
+Além disso, será desenvolvido dentro do ambiente de aprendizado da disciplina, o Aprender 3 (moodle), uma comunicação com a API externa, enviando os dados das avaliações individuais realizadas pelos discentes. Após receber o retorno da solicitação a respeito das informações enviadas, será possível baixar em um arquivo no formato PDF para visualizar o \textit{feedback}.

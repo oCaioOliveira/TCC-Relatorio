@@ -1,0 +1,76 @@
+
+\input{fixos/pacotes}
+\input{fixos/comandos}
+\usepackage{fixos/customizacoes}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{tabularx}
+\usepackage{graphicx} 
+\usepackage{ifthen}
+\usepackage{amssymb}
+\usepackage{adjustbox}   
+\usepackage{emptypage}
+\newboolean{showcomments}
+\setboolean{showcomments}{true}
+
+\ifthenelse{\boolean{showcomments}}
+  {\newcommand{\nb}[2]{
+    \fcolorbox{gray}{yellow}{\bfseries\sffamily\scriptsize#1}
+    {\sf\small$\blacktriangleright$\textit{#2}$\blacktriangleleft$}
+   }
+   \newcommand{\version}{\emph{\scriptsize$-$working$-$}}
+  }
+  {\newcommand{\nb}[2]{}
+   \newcommand{\version}{}
+  }
+
+\newcommand\info[1]{\nb{Info}{#1}}
+\newcommand\todo[1]{\nb{ToDo}{#1}}
+
+
+\newcommand\carla[1]{\nb{Carla}{#1}}
+\newcommand\Carla[1]{\nb{Carla}{#1}}
+
+
+\input{editaveis/informacoes}
+\input{fixos/informacoes}
+\input{fixos/setup}
+
+
+\begin{document}
+
+\frenchspacing 
+\imprimircapa
+\imprimirfolhaderosto*
+
+\input{fixos/fichaCatalografica}
+
+\input{fixos/folhaDeAprovacao}
+\input{editaveis/agradecimentos}
+\input{editaveis/resumo}
+\input{editaveis/abstract}
+\input{fixos/listasAutomaticas}
+\input{editaveis/abreviaturas}
+\input{fixos/indiceAutomatico}
+
+\textual
+
+\input{editaveis/1-Introducao}
+\cleardoublepage
+\input{editaveis/2-ReferencialTeorico}
+\input{editaveis/3-metodologia}
+\input{editaveis/4-execucao_resultados}
+\input{editaveis/5-analise_resultados}
+\input{editaveis/6-analise_de_viabilidade_tecnica}
+\input{editaveis/7-planejamento}
+\input{editaveis/8-conclusao}
+
+\bookmarksetup{startatroot} 
+
+\postextual
+
+\bibliography{bibliografia} 
+\printindex
+
+\end{document}
+
