@@ -8,7 +8,7 @@ Neste capítulo, discutiremos a viabilidade técnica do desenvolvimento de uma I
 
 Os objetivos técnicos deste trabalho refletem em analisar o desempenho dos alunos em avaliações individuais das disciplinas requisitos de software e métodos de desenvolvimento de software, para gerar \textit{feedbacks} formativos por meio de uma inteligência artificial.
 
-Existindo uma comunicação externa à plataforma de aprendizado utilizada nas disciplinas, o Aprender 3, sendo executada por meio de uma API provendo a comunicação entre os dados das avaliações individuais dos alunos e os \textit{feedbacks} formativos relacionados gerados por uma inteligência artificial.
+Existindo uma comunicação externa à plataforma utilizada nas disciplinas, o Microsoft Forms, sendo executada por meio de uma automação com a ferramenta Microsoft Power Automate, que provê a comunicação entre os dados das avaliações individuais dos alunos e os feedbacks formativos gerados pela inteligência artificial.
 
 \section{Requisitos da Ferramenta}
 
@@ -28,4 +28,4 @@ Levando em consideração os requisitos da ferramenta a ser construída, foi pla
   \item API Externa: utilizar o \textit{framework} FastAPI, para desenvolver uma API em Python que se comunique com o modelo de inteligência artificial.
 \end{itemize}
 
-Além disso, será desenvolvido dentro do ambiente de aprendizado da disciplina, o Aprender 3 (moodle), uma comunicação com a API externa, enviando os dados das avaliações individuais realizadas pelos discentes. Após receber o retorno da solicitação a respeito das informações enviadas, será possível baixar em um arquivo no formato PDF para visualizar o \textit{feedback}.
+Além disso, será desenvolvido um fluxo de trabalho que integra o Microsoft Forms e a API externa. Os dados das avaliações individuais realizadas pelos discentes serão enviados automaticamente para a API por meio do Microsoft Power Automate. Após o processamento das informações, o feedback formativo gerado será disponibilizado para os alunos em um arquivo no formato PDF, acessível diretamente através da plataforma de e-mail.
