@@ -1,6 +1,6 @@
-\chapter{Desenvolvimento da Ferramenta de Feedback Formativo - FeedFor}
+\chapter{Execução e Resultados da Fase 2}
 
-\section{Visão Geral do Projeto}
+\section{Visão Geral da Ferramenta FeedFor}
 
 O Projeto FeedFor é uma API desenvolvida para funcionar como uma ferramenta para disciplinas ou organizações que desejam uma integração maior com seus estudantes, fornecendo feedbacks formativos que indicam o motivo das respostas estarem erradas e o que pode ser aperfeiçoado na área de aprendizagem. O projeto não se compromete com a correção das questões, mas sim com a revisão das respostas, mostrando os motivos dos erros e as ações necessárias para melhorar nas próximas avaliações sobre aquele assunto.
 
@@ -28,10 +28,6 @@ Para visualizar melhor o funcionamento do projeto basta acessar o vídeo de demo
 
 Para acessar e usar o projeto basta acessar seu repositório pelo link: \href{https://github.com/oCaioOliveira/FeedFor}{Repositório do Projeto FeedFor}.
 
-\section{Metodologia de Desenvolvimento}
-
-Para o desenvolvimento da ferramenta FeedFor, utilizou-se a metodologia Kanban, uma abordagem ágil que se mostrou eficaz para o gerenciamento do projeto. A escolha do Kanban visou garantir uma visão clara das atividades em andamento e permitir uma gestão eficiente das tarefas e prazos. A plataforma Jira foi empregada como ferramenta de apoio para a implementação do Kanban. No Jira, as atividades foram organizadas em quadros Kanban, facilitando a visualização do fluxo de trabalho e o controle do progresso das tarefas.
-
 \section{Tecnologias Utilizadas}
 
 Durante o desenvolvimento do projeto FeedFor, diversas tecnologias foram empregadas para atender às necessidades específicas e melhorar a eficiência do sistema. Inicialmente, havia a intenção de utilizar o framework FastAPI, devido à sua alta performance e simplicidade. No entanto, ao longo do desenvolvimento, optou-se pelo framework Django, por oferecer configurações prontas que facilitaram o gerenciamento do projeto. Entre as vantagens do Django, destacam-se:
@@ -50,6 +46,8 @@ Para lidar com múltiplas tarefas e evitar o bloqueio da API devido ao grande n�
     \item \textbf{Celery:} Uma biblioteca de gerenciamento de tarefas distribuídas que permitiu a execução assíncrona de tarefas, como o processamento das respostas e o envio de feedbacks.
     \item \textbf{Redis:} Um banco de dados em memória que foi usado como broker para o Celery, armazenando e gerenciando as filas de tarefas.
 \end{itemize}
+
+Após incluir essas tecnologias no projeto, foi possível melhorar a escalabilidade e a eficiência do sistema, garantindo que as requisições à API da OpenAI e o envio de e-mails fossem processadas de forma rápida e responsiva. Requisições que antes demoravam entre 2 a 5 segundos, foram melhoradas para no máximo 200 milissegundos. Além disso, o uso do celery permitiu que o sistema suportasse um grande volume de requisições simultâneas, sem comprometer a qualidade ou a velocidade de resposta. Uma análise de desempenho foi realizada usando o próprio Postman, enviando cerca de 30 requisições em um espaço de tempo de um minuto simulando os envios de questionários ao fim de uma aula, e apesar do tempo de receber o e-mail ter aumentado, o tempo de resposta da API se manteve estável e sem gargalos.
 
 Além dessas tecnologias principais, outras bibliotecas específicas foram utilizadas para funcionalidades adicionais:
 
@@ -88,6 +86,8 @@ Além desses endpoints principais, foi implementado um endpoint adicional para d
 \end{itemize}
 
 Cada um desses endpoints desempenha um papel crucial no fluxo de funcionamento da ferramenta FeedFor, garantindo desde a administração do sistema até a geração e envio de feedbacks e relatórios detalhados. A documentação técnica acessível pelo endpoint /swagger/ auxilia na integração e uso da API por terceiros. Além disso, no repositório do projeto existe uma pasta com o nome requests examples, dentro dessa pasta existem exemplos de requisições reais para auxliar no uso da ferramenta.
+
+Pode ser visualizado esse processo automatizado com detalhes no Anexo II \ref{anexoIIFGAF}.
 
 \section{Banco de Dados e Modelagem}
 
@@ -165,11 +165,32 @@ O desenvolvimento e a operação do projeto FeedFor envolvem alguns custos princ
 
 \subsection{Custo da OpenAI API}
 
-O principal custo associado ao FeedFor é o uso da OpenAI API, que não é mais gratuita para novos usuários. Durante a fase de testes do projeto, foi gasto um total de 5 dólares, o valor mínimo para adquirir créditos na plataforma. Desses 5 dólares, foram utilizados efetivamente 0.24 dólares para 225 requisições.
+O principal custo associado ao FeedFor é o uso da OpenAI API, que não é mais gratuita para novos usuários. Durante a fase de testes do projeto, foi gasto um total de 5 dólares, o valor mínimo para adquirir créditos na plataforma. Desses 5 dólares, foram utilizados efetivamente 0.23 dólares para 225 requisições.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figuras/cost_openai.png}
+    \caption{Dashboard de Custos da OpenAI API}
+    \label{fig:first_phase}
+\end{figure}
 
 O custo da OpenAI API é baseado na quantidade de tokens processados e qual modelo é utilizado. Tokens são sequências de caracteres que podem representar palavras, partes de palavras ou até mesmo caracteres individuais, dependendo do contexto. O projeto, em média, utiliza cerca de 500 tokens por requisição (entrada e saída), o que resulta em um custo relativamente baixo.
 
 Vale destacar que durante os testes, mais da metade dos gastos foram com o modelo mais recente da OpenAI, que possui um custo mais elevado em comparação ao modelo GPT-3.5-turbo. O GPT-3.5-turbo demonstrou ser suficiente para as necessidades do projeto e tem um custo mais acessível, o que indica que os gastos reais podem ser ainda menores no uso contínuo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figuras/cost_gpt_35.png}
+    \caption{Dashboard de Custos do modelo GPT-3.5-turbo}
+    \label{fig:first_phase}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figuras/cost_gpt_4o.png}
+    \caption{Dashboard de Custos do modelo GPT-4o}
+    \label{fig:first_phase}
+\end{figure}
 
 Inicialmente, o custo pode ser um pouco mais alto devido ao fato de que nenhuma questão terá um feedback pré-preenchido. Cada nova resposta errada gera uma nova requisição à API. No entanto, com o tempo, à medida que mais feedbacks forem gerados e armazenados, o número de novas requisições será reduzido, resultando em uma diminuição significativa dos custos operacionais.
 
@@ -245,9 +266,9 @@ Esses ajustes e configurações foram desenvolvidos para aprimorar a eficácia d
 
 O Feedback Formativo é um componente crucial para o aprendizado dos estudantes, proporcionando informações detalhadas sobre suas respostas e orientações para melhorar seu desempenho. O desenvolvimento do template do feedback passou por várias fases, e a versão final foi definida com base em avaliações de profissionais da área da educação e especialistas em atendimento a pessoas com transtornos do neurodesenvolvimento.
 
-\subsection{Exemplos de Feedback Formativo}
+\subsection{Exemplos de Feedback Formativo e Relatórios de Desempenho}
 
-A seguir, são apresentadas duas imagens exemplificando o formato final do Feedback Formativo recebido pelos estudantes:
+A seguir, são apresentadas três imagens exemplificando o formato final do Feedback Formativo recebido pelos estudantes e o relatório de desempenho recebido pelos professores:
 
 \begin{figure}[H]
     \centering
@@ -262,6 +283,22 @@ A seguir, são apresentadas duas imagens exemplificando o formato final do Feedb
     \caption{Exemplo de Feedback Formativo - Questão Correta}
     \label{fig:feedback_example2}
 \end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figuras/report.png}
+    \caption{Exemplo de Relatório de Desempenho - Alunos}
+    \label{fig:report}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figuras/report_questions.png}
+    \caption{Exemplo de Relatório de Desempenho - Questões}
+    \label{fig:report_questions}
+\end{figure}
+
+Pode ser visualizado mais exemplos de Feedbacks gerados no Anexo III \ref{anexoIIIEFFG}.
 
 \subsection{Design e Cores do Feedback}
 
@@ -294,6 +331,8 @@ Este formato foi escolhido para maximizar a eficácia do feedback formativo, aju
 No desenvolvimento do projeto FeedFor, um aspecto fundamental é a capacidade de se conectar com aplicações externas para automatizar o processo de envio de feedbacks aos estudantes. A automatização da API FeedFor pode ser realizada com diversos sistemas, porém, os métodos mais explorados foram através do Microsoft Power Automate e do Excel no OneDrive.
 
 No Microsoft Power Automate, é possível criar fluxos com outras ferramentas da Microsoft para automatizar processos. O ideal é criar os questionários usando o Microsoft Forms e, em seguida, ligar esse questionário com um serviço de requisição HTTP (existem vários dentro da plataforma Microsoft Power Automate, sendo necessário apenas ter as permissões adequadas). Assim que um usuário completa o questionário, uma requisição HTTP é enviada automaticamente para nossa ferramenta conforme configurado na plataforma. Ao chegar no FeedFor, a requisição é processada e o feedback é enviado para o e-mail do estudante associado ao questionário.
+
+Pode ser visualizado esse processo automatizado com detalhes no Anexo I \ref{anexoITIMPA}.
 
 Outra forma de conseguir essa automatização é por meio do acesso ao Excel através da API do OneDrive para consumir dados da planilha de questionários que é atualizada automaticamente pelo Microsoft Forms. Embora também sejam necessárias permissões, essa abordagem elimina a necessidade de qualquer configuração no Microsoft Power Automate.
 
