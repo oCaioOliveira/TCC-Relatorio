@@ -1,8 +1,10 @@
 \chapter{Execução e Resultados da Fase 2}
 
+Os resultados alcançados e apresentados na Fase 1, deste TCC, foram utilizados como base para o desenvolvimento de uma ferramenta baseada em Inteligência Artificial, denominada FeedFor. 
+
 \section{Visão Geral da Ferramenta FeedFor}
 
-O Projeto FeedFor é uma API desenvolvida para funcionar como uma ferramenta para disciplinas ou organizações que desejam uma integração maior com seus estudantes, fornecendo feedbacks formativos que indicam o motivo das respostas estarem erradas e o que pode ser aperfeiçoado na área de aprendizagem. O projeto não se compromete com a correção das questões, mas sim com a revisão das respostas, mostrando os motivos dos erros e as ações necessárias para melhorar nas próximas avaliações sobre aquele assunto.
+FeedFor é uma API desenvolvida para funcionar como uma ferramenta para disciplinas ou organizações que desejam uma integração maior com seus estudantes, fornecendo feedbacks formativos que indicam o motivo das respostas estarem erradas e o que pode ser aperfeiçoado na área de aprendizagem. O projeto não se compromete com a correção das questões, mas sim com a revisão das respostas, mostrando os motivos dos erros e as ações necessárias para melhorar nas próximas avaliações sobre aquele assunto.
 
 A função principal dessa ferramenta é fornecer feedbacks formativos, inicialmente planejados para servir apenas às disciplinas de Métodos de Desenvolvimento de Software e Requisitos de Software. No entanto, durante o desenvolvimento, o escopo foi ampliado, tornando a ferramenta genérica o suficiente para atender qualquer disciplina que deseje utilizá-la.
 
@@ -24,7 +26,7 @@ Com o escopo ampliado, outras funcionalidades secundárias foram adicionadas, in
     \item \textbf{Relatórios de Desempenho:} Um recurso gerencial que permite aos professores receber relatórios sobre o desempenho da turma e estatísticas sobre as questões criadas.
 \end{itemize}
 
-Para visualizar melhor o funcionamento do projeto basta acessar o vídeo de demonstração pelo link: \href{https://youtu.be/KL6FrNapAPk}{FeedFor - Explicação e Demonstração de Funcionamento do Projeto}.
+Para visualizar melhor o funcionamento basta acessar o vídeo de demonstração pelo link: \href{https://youtu.be/KL6FrNapAPk}{FeedFor - Explicação e Demonstração de Funcionamento do Projeto}.
 
 Para acessar e usar o projeto basta acessar seu repositório pelo link: \href{https://github.com/oCaioOliveira/FeedFor}{Repositório do Projeto FeedFor}.
 
@@ -139,7 +141,7 @@ Para acessar o modelo dessa terceira fase basta acessar o link: \href{https://lu
     \item \textbf{Professor (Teacher):} Armazena informações dos professores, incluindo o email para receber relatórios de questionários e visualizar os feedbacks recebidos pelos estudantes.
     \item \textbf{Matéria (Subject):} Armazena informações das matérias, ajudando a separar os contextos dos questionários e relacionando-se com as configurações do chat para determinar como os feedbacks serão gerados para aquela matéria.
     \item \textbf{Questionário (Questionnaire):} Armazena informações sobre os questionários realizados, incluindo o ID externo usado para regenerar feedbacks específicos.
-    \item \textbf{Item (Item):} Armazena informações sobre as perguntas das questões, incluindo o conteúdo e a resposta correta, essenciais para contextualizar o feedback gerado pela API da OpenAI.
+    \item \textbf{Item (Item):} Armazena informações sobre as perguntas das questões, incluindo o conteúdo e a resposta correta, essenciais para contextualizar o feedback gerado pela API da OpenAI, conseguindo distinguir qual tipo de questão se trata a partir do tipo da variável recebida na requisição.
     \item \textbf{Resposta (Answer):} Armazena informações sobre as respostas dos estudantes, indicando se estão corretas ou não e, se incorretas, os feedbacks gerados, permitindo a reutilização futura do feedback.
     \item \textbf{Resultado (Result):} Armazena a pontuação obtida por um estudante em um questionário.
     \item \textbf{Configurações do Chat (ChatSettings):} Armazena configurações do modelo requisitado na API da OpenAI, como a versão do modelo, temperatura, token de acesso à API e outras configurações técnicas.

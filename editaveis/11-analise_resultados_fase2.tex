@@ -10,11 +10,7 @@ O aumento do escopo para abranger qualquer disciplina também é um ponto positi
 
 Durante a fase 2, foi possível observar que a escolha do framework Django proporcionou uma estrutura robusta e facilitou a implementação de novas funcionalidades, como autenticação e geração de relatórios. A integração com a API da OpenAI e o uso do Celery para gerenciamento de tarefas assíncronas mostraram-se essenciais para manter a escalabilidade e a responsividade do sistema.
 
-\subsection{OpenAI API}
-
 A integração com a API da OpenAI foi fundamental para o sucesso do projeto. Durante os testes, o uso do modelo GPT-3.5-turbo foi suficiente para atender às necessidades de geração de feedbacks formativos, e o custo associado ao uso dessa tecnologia foi considerado aceitável dentro dos parâmetros de teste.
-
-\subsection{Celery e Redis}
 
 O uso do Celery em conjunto com o Redis como broker foi crucial para a implementação de tarefas assíncronas, garantindo que o sistema permanecesse responsivo mesmo com um grande volume de requisições. A análise de desempenho mostrou que essa arquitetura suportou bem o fluxo de trabalho, evitando gargalos e garantindo que os feedbacks fossem gerados e enviados em tempo hábil.
 
@@ -22,11 +18,7 @@ O uso do Celery em conjunto com o Redis como broker foi crucial para a implement
 
 As funcionalidades adicionais, como a possibilidade de reenviar feedbacks e gerar relatórios de desempenho, tem um impacto positivo na aceitação do sistema pelos usuários. 
 
-\subsection{Reenvio de Feedback}
-
 A funcionalidade de reenvio de feedback permite que os professores revisem e enviem novamente os feedbacks formativos, o que se mostra útil em situações onde os estudantes precisarem de reforço adicional ou onde houver necessidade de correções.
-
-\subsection{Relatórios de Desempenho}
 
 A capacidade de gerar relatórios detalhados, contendo porcentagens de acertos, desempenho por questão, e outras métricas, permite uma análise mais aprofundada do progresso dos estudantes e das áreas que necessitavam de mais atenção.
 
@@ -34,19 +26,13 @@ A capacidade de gerar relatórios detalhados, contendo porcentagens de acertos, 
 
 A evolução do banco de dados ao longo das três fases do projeto permitiu uma flexibilidade maior e uma melhor adaptação ao novo escopo do projeto. A inclusão de tabelas adicionais e a melhoria dos relacionamentos entre elas resultaram em uma estrutura mais eficiente e escalável.
 
-\subsection{Otimização da Reutilização de Feedbacks}
-
 A criação da tabela de Respostas na segunda fase trouxe uma otimização significativa ao sistema, reduzindo o número de requisições redundantes à API da OpenAI. Essa melhoria não apenas reduziu os custos operacionais, mas também aumentou a velocidade de resposta da ferramenta.
-
-\subsection{Expansão da Estrutura para Múltiplas Disciplinas}
 
 A terceira fase do projeto, que incluiu a expansão para suportar múltiplas disciplinas e professores, foi fundamental para a utilização do projeto em um contexto mais amplo. A modelagem do banco de dados permitiu que a ferramenta se adaptasse facilmente a diferentes disciplinas, mantendo a consistência e a integridade dos dados.
 
 \section{Análise da Arquitetura do Sistema}
 
 A mudança de abordagem da Arquitetura Limpa para uma Arquitetura em Camadas simplificada se mostrou eficaz dado o contexto e as necessidades do projeto. Embora a Arquitetura Limpa tenha suas vantagens, a Arquitetura em Camadas foi suficiente para manter uma boa separação de responsabilidades e facilitar a manutenção com a equipe reduzida.
-
-\subsection{Flexibilidade e Manutenibilidade}
 
 A Arquitetura em Camadas proporcionou uma estrutura clara e bem definida, o que facilitou a manutenção e a evolução do sistema. Embora a Arquitetura Limpa pudesse oferecer maior independência entre camadas, a decisão de simplificar a arquitetura se mostrou adequada diante das limitações de recursos e tempo.
 
