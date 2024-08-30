@@ -10,11 +10,40 @@ O cálculo do $\alpha$ de Cronbach gerou um valor exato de 0.753268, e este valo
 
 \section{Interpretação dos dados}
 
+As imagens a seguir apresentam os resultados obtidos a partir do formulário aplicado aos alunos. A Tabela abaixo apresenta as opções de formato de feedback disponíveis para os alunos em números para os gráficos ficarem mais organizados.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|p{10cm}|}
+        \hline
+        \textbf{Número} & \textbf{Formato de Feedback} \\
+        \hline
+        1 & Menções \\
+        \hline
+        2 & Visualizar o gabarito de cada questão \\
+        \hline
+        3 & Exibir a explicação correspondente ao gabarito de cada questão \\
+        \hline
+        4 & Indicação do material de estudo necessário para revisões do conteúdo \\
+        \hline
+        5 & Visualizar os temas dos conteúdos que tiveram baixa taxa de acerto por meio de indicações textuais \\
+        \hline
+        6 & Visualizar um gráfico com uma divisão por temas em um conteúdo informando o desempenho na avaliação \\
+        \hline
+        7 & Reunião com o professor da disciplina para discutir sobre o resultado na avaliação e receber um Feedback humano \\
+        \hline
+        8 & Relatório no formato PDF com um feedback descritivo do desempenho do aluno na avaliação \\
+        \hline
+    \end{tabular}
+    \caption{Correspondência entre opções de formato de feedback e números.}
+    \label{tab:feedback_options}
+\end{table}
+
 O mapa de calor a seguir, gerado pelo modelo GPT-4o do ChatGPT, representa as correlações entre diferentes formatos de feedback com base nas preferências dos alunos. Cada célula representa a correlação entre dois formatos de feedback, com valores variando de -1 a 1. Um valor de correlação próximo de 1 indica uma forte correlação positiva, significando que quando a preferência por um formato aumenta, a preferência pelo outro também tende a aumentar. Um valor próximo de -1 indicaria uma forte correlação negativa, o que não é observado neste conjunto de dados. Valores próximos de 0 indicam pouca ou nenhuma correlação.
 
 \begin{figure}[H]
 \centering
-\includegraphics{figuras/heatmapfeedback.png}
+\includegraphics[scale=0.6]{figuras/heatmap.png}
 \caption{Mapa de calor das correlações entre os formatos de feedback}
 \end{figure}
 
@@ -42,7 +71,7 @@ A partir dos dados quantitativos, obtidos através do formulário:
 
 \begin{figure}[H]
 \centering
-\includegraphics{figuras/gender_graph.png}
+\includegraphics[scale=0.5]{figuras/gender.png}
 \caption{Gráfico representando a relação entre gênero e a avaliação do formato de feedback.}
 \end{figure}
 
@@ -50,13 +79,15 @@ A partir dos dados quantitativos, obtidos através do formulário:
 
 12. Foi observada correlações moderadas entre a presença de transtornos neurobiológicos e a preferência por certos tipos de feedback, como "Visualizar Gabarito" e "Reunião com o Professor". Essas correlações sugerem que alunos com transtornos neurobiológicos podem ter preferências específicas por feedbacks mais detalhados e interativos.
 
-O gráfico a seguir, gerado pela ferramenta ChatGPT, mostra as correlações entre a presença de transtornos neurobiológicos nos respondentes e suas preferências por diferentes formatos de feedback:
+O gráfico a seguir, gerado pelo modelo GPT-4o do ChatGPT, mostra as correlações entre a presença de transtornos neurobiológicos nos respondentes e suas preferências por diferentes formatos de feedback:
 
 \begin{figure}[!h]
 \centering
-\includegraphics{figuras/neurological_graphic.png}
+\includegraphics[scale=0.5]{figuras/neurological.png}
 \caption{Correlações entre a presença de transtornos neurobiológicos nos respondentes e suas preferências por diferentes formatos de feedback}
 \end{figure}
+
+\clearpage
 
 \begin{table}[H]
 \centering
