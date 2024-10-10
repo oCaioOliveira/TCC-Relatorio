@@ -10,38 +10,38 @@ O primeiro passo é criar um fluxo na plataforma Microsoft Power Automate. Dentr
 
 \subsection*{1. Criar um novo fluxo}
 
-Selecione a etapa \textbf{"Quando uma nova resposta é enviada"}.
+Selecione a etapa \textbf{``Quando uma nova resposta é enviada''}.
 Nesta etapa, vamos apenas selecionar o ID do questionário que desejamos observar.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/mpa_new_answer.png}
     \caption{Etapa - Quando uma nova resposta é enviada}
+    \includegraphics[width=1\textwidth]{figuras/mpa_new_answer.png}
     \label{fig:report_questions}
 \end{figure}
 
 \subsection*{2. Obter os detalhes da resposta}
 
-Em seguida, selecione a etapa \textbf{"Obter os detalhes da resposta"}.
+Em seguida, selecione a etapa \textbf{``Obter os detalhes da resposta''}.
 Aqui, vamos selecionar novamente o ID do questionário e o ID da resposta que queremos observar.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/mpa_detail_answer.png}
     \caption{Etapa - Obter os detalhes da resposta}
+    \includegraphics[width=1\textwidth]{figuras/mpa_detail_answer.png}
     \label{fig:report_questions}
 \end{figure}
 
 \subsection*{3. Realizar uma requisição HTTP}
 
-A próxima etapa é adicionar o passo \textbf{"HTTP"}, que realizará uma requisição externa ao ambiente do Power Automate.
+A próxima etapa é adicionar o passo \textbf{``HTTP''}, que realizará uma requisição externa ao ambiente do Power Automate.
 Como nossa API não está hospedada em nenhuma plataforma específica, vamos direcionar a requisição para o site \textbf{webhook.site}.
 Este site permite monitorar todas as requisições externas que chegam a ele, exibindo o método utilizado, o payload, e todas as informações enviadas. Isso prova que é possível fazer uma requisição externa à plataforma.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/mpa_http.png}
     \caption{Etapa - HTTP}
+    \includegraphics[width=1\textwidth]{figuras/mpa_http.png}
     \label{fig:report_questions}
 \end{figure}
 
@@ -51,8 +51,8 @@ Quando clicar no campo de texto nas configurações da requisição, o Power Aut
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/mpa_example.png}
     \caption{Configurações das Respostas do Questionário}
+    \includegraphics[width=1\textwidth]{figuras/mpa_example.png}
     \label{fig:report_questions}
 \end{figure}
 
@@ -64,22 +64,22 @@ Com todas as etapas configuradas, é possível testar o fluxo. Para isso, basta 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/mpa_geral_vision.png}
     \caption{Fluxo do Microsoft Power Automate}
+    \includegraphics[width=1\textwidth]{figuras/mpa_geral_vision.png}
     \label{fig:report_questions}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/webhook_1.png}
     \caption{Requisição enviada para o site webhook.site - Detalhes da Requisição e Headers}
+    \includegraphics[width=1\textwidth]{figuras/webhook_1.png}
     \label{fig:report_questions}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/webhook_2.png}
     \caption{Requisição enviada para o site webhook.site - Body da Requisição}
+    \includegraphics[width=1\textwidth]{figuras/webhook_2.png}
     \label{fig:report_questions}
 \end{figure}
 

@@ -4,61 +4,61 @@
 
 Neste anexo, vamos detalhar o funcionamento dos principais endpoints da API FeedFor, ilustrando com exemplos e capturas de tela para demonstrar as requisições e as respostas recebidas.
 
-\section*{1. Endpoint para armazenar o questionário e enviar o feedback formativo por e-mail (/core/send-feedback/)}
+\section*{1. Endpoint para armazenar o questionário e enviar o \textit{feedback} formativo por e-mail (/core/send-\textit{feedback}/)}
 
-- **Descrição:** Este é o endpoint principal da API, responsável por armazenar o questionário do estudante e enviar o feedback formativo para o email do aluno.
+- **Descrição:** Este é o endpoint principal da API, responsável por armazenar o questionário do estudante e enviar o \textit{feedback} formativo para o email do aluno.
 
-- **Funcionamento:** Ao enviar uma requisição para este endpoint, o questionário é processado, e um feedback personalizado é gerado e enviado por email.
+- **Funcionamento:** Ao enviar uma requisição para este endpoint, o questionário é processado, e um \textit{feedback} personalizado é gerado e enviado por email.
 
 - **Exemplo de Requisição e Resposta:**
 
 \begin{figure}[H]
     \centering
+    \caption{Requisição ao endpoint que envia os dados do questionário para enviar \textit{feedback} formativo para o e-mail}
     \includegraphics[width=1\textwidth]{figuras/send_report.png}
-    \caption{Requisição ao endpoint que envia os dados do questionário para enviar feedback formativo para o e-mail}
     \label{fig:report_questions}
 \end{figure}
 
 \begin{figure}[H]
     \centering
+    \caption{Resposta do endpoint que envia os dados do questionário para enviar \textit{feedback} formativo para o e-mail}
     \includegraphics[width=1\textwidth]{figuras/send_report_result.png}
-    \caption{Resposta do endpoint que envia os dados do questionário para enviar feedback formativo para o e-mail}
     \label{fig:report_questions}
 \end{figure}
 
 \begin{figure}[H]
     \centering
+    \caption{\textit{feedback} Formativo recebido direto no e-mail após a requisição}
     \includegraphics[width=1\textwidth]{figuras/feedback.png}
-    \caption{Feedback Formativo recebido direto no e-mail após a requisição}
     \label{fig:report_questions}
 \end{figure}
 
-\section*{2. Endpoint para reenviar o feedback formativo por e-mail (/core/resend-feedback/)}
+\section*{2. Endpoint para reenviar o \textit{feedback} formativo por e-mail (/core/resend-\textit{feedback}/)}
 
-- **Descrição:** Este endpoint é utilizado para reenviar o feedback formativo que já foi enviado anteriormente, caso o aluno, professor ou outro indivíduo precise de uma cópia adicional.
+- **Descrição:** Este endpoint é utilizado para reenviar o \textit{feedback} formativo que já foi enviado anteriormente, caso o aluno, professor ou outro indivíduo precise de uma cópia adicional.
 
-- **Funcionamento:** Através deste endpoint, o feedback anteriormente gerado pode ser reenviado para o email do aluno.
+- **Funcionamento:** Através deste endpoint, o \textit{feedback} anteriormente gerado pode ser reenviado para o email do aluno.
 
 - **Exemplo de Requisição e Resposta:**
 
 \begin{figure}[H]
     \centering
+    \caption{Requisição ao endpoint que envia os dados necessários para reenviar \textit{feedback} formativo para o e-mail}
     \includegraphics[width=1\textwidth]{figuras/resend_report.png}
-    \caption{Requisição ao endpoint que envia os dados necessários para reenviar feedback formativo para o e-mail}
     \label{fig:report_questions}
 \end{figure}
 
 \begin{figure}[H]
     \centering
+    \caption{Resposta do endpoint que envia os dados necessários para reenviar \textit{feedback} formativo para o e-mail}
     \includegraphics[width=1\textwidth]{figuras/resend_report_result.png}
-    \caption{Resposta do endpoint que envia os dados necessários para reenviar feedback formativo para o e-mail}
     \label{fig:report_questions}
 \end{figure}
 
 \begin{figure}[H]
     \centering
+    \caption{\textit{feedback} Formativo recebido direto no e-mail após a requisição}
     \includegraphics[width=1\textwidth]{figuras/feedback.png}
-    \caption{Feedback Formativo recebido direto no e-mail após a requisição}
     \label{fig:report_questions}
 \end{figure}
 
@@ -72,22 +72,22 @@ Neste anexo, vamos detalhar o funcionamento dos principais endpoints da API Feed
   
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/send_report_teacher.png}
     \caption{Requisição ao endpoint que envia os dados necessários para enviar relatório de desempenho}
+    \includegraphics[width=1\textwidth]{figuras/send_report_teacher.png}
     \label{fig:report_questions}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/send_report_teacher_result.png}
     \caption{Resposta do endpoint que envia os dados necessários para enviar relatório de desempenho}
+    \includegraphics[width=1\textwidth]{figuras/send_report_teacher_result.png}
     \label{fig:report_questions}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/report_email.png}
     \caption{Relatório de Desempenho recebido no e-mail após a requisição}
+    \includegraphics[width=1\textwidth]{figuras/report_email.png}
     \label{fig:report_questions}
 \end{figure}
 
@@ -101,29 +101,29 @@ Neste anexo, vamos detalhar o funcionamento dos principais endpoints da API Feed
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/token.png}
     \caption{Requisição ao endpoint que envia os dados necessários para se autenticar e gerar um token}
+    \includegraphics[width=1\textwidth]{figuras/token.png}
     \label{fig:report_questions}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/token_result.png}
     \caption{Resposta do endpoint que envia os dados necessários para se autenticar e gerar um token}
+    \includegraphics[width=1\textwidth]{figuras/token_result.png}
     \label{fig:report_questions}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/refresh.png}
     \caption{Requisição ao endpoint que envia os dados necessários para recarregar e gerar um novo token}
+    \includegraphics[width=1\textwidth]{figuras/refresh.png}
     \label{fig:report_questions}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/refresh_result.png}
     \caption{Resposta do endpoint que envia os dados necessários para recarregar e gerar um novo token}
+    \includegraphics[width=1\textwidth]{figuras/refresh_result.png}
     \label{fig:report_questions}
 \end{figure}
 
@@ -137,8 +137,8 @@ Neste anexo, vamos detalhar o funcionamento dos principais endpoints da API Feed
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/swagger.png}
     \caption{Documentação da API}
+    \includegraphics[width=1\textwidth]{figuras/swagger.png}
     \label{fig:report_questions}
 \end{figure}
 
@@ -152,8 +152,8 @@ Neste anexo, vamos detalhar o funcionamento dos principais endpoints da API Feed
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/admin.png}
     \caption{Página de Administrador do Sistema}
+    \includegraphics[width=1\textwidth]{figuras/admin.png}
     \label{fig:report_questions}
 \end{figure}
 
@@ -161,28 +161,28 @@ Por meio da página de administrador, todas as tabelas podem ser acessadas, perm
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/admin1.png}
     \caption{Página de Visualização de Todas as Respostas Salvas no Banco de Dados}
+    \includegraphics[width=1\textwidth]{figuras/admin1.png}
     \label{fig:report_questions}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/admin2.png}
     \caption{Página de Edição das Configurações do Chat da OpenAI}
+    \includegraphics[width=1\textwidth]{figuras/admin2.png}
     \label{fig:report_questions}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/admin3.png}
     \caption{Página de Visualização dos Resultados dos Alunos nos Questionários}
+    \includegraphics[width=1\textwidth]{figuras/admin3.png}
     \label{fig:report_questions}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/admin4.png}
     \caption{Página de Edição de uma matéria específica}
+    \includegraphics[width=1\textwidth]{figuras/admin4.png}
     \label{fig:report_questions}
 \end{figure}

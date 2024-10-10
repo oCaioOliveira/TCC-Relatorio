@@ -4,31 +4,31 @@ Os resultados alcançados e apresentados na Fase 1, deste TCC, foram utilizados 
 
 \section{Visão Geral da Ferramenta FeedFor}
 
-FeedFor é uma API desenvolvida para funcionar como uma ferramenta para disciplinas ou organizações que desejam uma integração maior com seus estudantes, fornecendo feedbacks formativos que indicam o motivo das respostas estarem erradas e o que pode ser aperfeiçoado na área de aprendizagem. O projeto não se compromete com a correção das questões, mas sim com a revisão das respostas, mostrando os motivos dos erros e as ações necessárias para melhorar nas próximas avaliações sobre aquele assunto.
+FeedFor é uma API desenvolvida para funcionar como uma ferramenta para disciplinas ou organizações que desejam uma integração maior com seus estudantes, fornecendo \textit{\textit{feedbacks}} formativos que indicam o motivo das respostas estarem erradas e o que pode ser aperfeiçoado na área de aprendizagem. O projeto não se compromete com a correção das questões, mas sim com a revisão das respostas, mostrando os motivos dos erros e as ações necessárias para melhorar nas próximas avaliações sobre aquele assunto.
 
-A função principal dessa ferramenta é fornecer feedbacks formativos, inicialmente planejados para servir apenas às disciplinas de Métodos de Desenvolvimento de Software e Requisitos de Software. No entanto, durante o desenvolvimento, o escopo foi ampliado, tornando a ferramenta genérica o suficiente para atender qualquer disciplina que deseje utilizá-la.
+A função principal dessa ferramenta é fornecer \textit{\textit{feedbacks}} formativos, inicialmente planejados para servir apenas às disciplinas de Métodos de Desenvolvimento de Software e Requisitos de Software. No entanto, durante o desenvolvimento, o escopo foi ampliado, tornando a ferramenta genérica o suficiente para atender qualquer disciplina que deseje utilizá-la.
 
-Dentro da ferramenta, é possível criar disciplinas, associar professores e estudantes, e fornecer o contexto da matéria para o modelo de inteligência artificial. Além disso, é possível personalizar as configurações do chat de comunicação com a OpenAI API, permitindo feedbacks mais individualizados.
+Dentro da ferramenta, é possível criar disciplinas, associar professores e estudantes, e fornecer o contexto da matéria para o modelo de inteligência artificial. Além disso, é possível personalizar as configurações do chat de comunicação com a OpenAI API, permitindo \textit{\textit{feedbacks}} mais individualizados.
 
 O projeto FeedFor suporta diferentes tipos de questões, incluindo:
 
 \begin{itemize}
     \item \textbf{Questões de Múltipla Escolha:} Onde os estudantes selecionam uma única resposta correta entre várias opções.
     \item \textbf{Questões de Múltiplas Respostas Corretas:} Onde os estudantes podem selecionar várias respostas corretas entre várias opções.
-    \item \textbf{Questões Abertas:} Onde os estudantes fornecem respostas discursivas, que são analisadas para gerar feedback formativo detalhado.
+    \item \textbf{Questões Abertas:} Onde os estudantes fornecem respostas discursivas, que são analisadas para gerar \textit{feedback} formativo detalhado.
 \end{itemize}
 
 Com o escopo ampliado, outras funcionalidades secundárias foram adicionadas, incluindo:
 
 \begin{itemize}
     \item \textbf{Autenticação:} A necessidade de autenticar os usuários para utilizar os serviços do FeedFor.
-    \item \textbf{Reenvio de Feedback:} A possibilidade de reenviar feedbacks formativos recebidos ou enviá-los para outra pessoa.
+    \item \textbf{Reenvio de \textit{feedback}:} A possibilidade de reenviar \textit{\textit{feedbacks}} formativos recebidos ou enviá-los para outra pessoa.
     \item \textbf{Relatórios de Desempenho:} Um recurso gerencial que permite aos professores receber relatórios sobre o desempenho da turma e estatísticas sobre as questões criadas.
 \end{itemize}
 
-Para visualizar melhor o funcionamento basta acessar o vídeo de demonstração pelo link: \href{https://youtu.be/KL6FrNapAPk}{FeedFor - Explicação e Demonstração de Funcionamento do Projeto}.
+Para visualizar melhor o funcionamento, basta acessar o vídeo de demonstração pelo link \footnote{\href{https://youtu.be/KL6FrNapAPk}{FeedFor - Explicação e Demonstração de Funcionamento do Projeto}}.
 
-Para acessar e usar o projeto basta acessar seu repositório pelo link: \href{https://github.com/oCaioOliveira/FeedFor}{Repositório do Projeto FeedFor}.
+Para acessar e usar o projeto, basta acessar seu repositório pelo link \footnote{\href{https://github.com/oCaioOliveira/FeedFor}{Repositório do Projeto FeedFor}}.
 
 \section{Tecnologias Utilizadas}
 
@@ -40,12 +40,12 @@ Durante o desenvolvimento do projeto FeedFor, diversas tecnologias foram emprega
     \item \textbf{Biblioteca ORM:} A biblioteca de ORM (Object-Relational Mapping) do Django é robusta e flexível, facilitando a modelagem e o gerenciamento do banco de dados.
 \end{itemize}
 
-Além do Django, a ferramenta OpenAI API foi utilizada para gerar os feedbacks formativos. Foi integrada ao sistema para processar as respostas dos questionários e fornecer feedbacks personalizados aos estudantes.
+Além do Django, a ferramenta OpenAI API foi utilizada para gerar os \textit{\textit{feedbacks}} formativos. Foi integrada ao sistema para processar as respostas dos questionários e fornecer \textit{\textit{feedbacks}} personalizados aos estudantes.
 
 Para lidar com múltiplas tarefas e evitar o bloqueio da API devido ao grande número de requisições à API do GPT, foram utilizadas as seguintes tecnologias:
 
 \begin{itemize}
-    \item \textbf{Celery:} Uma biblioteca de gerenciamento de tarefas distribuídas que permitiu a execução assíncrona de tarefas, como o processamento das respostas e o envio de feedbacks.
+    \item \textbf{Celery:} Uma biblioteca de gerenciamento de tarefas distribuídas que permitiu a execução assíncrona de tarefas, como o processamento das respostas e o envio de \textit{\textit{feedbacks}}.
     \item \textbf{Redis:} Um banco de dados em memória que foi usado como broker para o Celery, armazenando e gerenciando as filas de tarefas.
 \end{itemize}
 
@@ -55,12 +55,12 @@ Além dessas tecnologias principais, outras bibliotecas específicas foram utili
 
 \begin{itemize}
     \item \textbf{Pandas:} Utilizada para a criação de relatórios detalhados sobre o desempenho da turma, facilitando a análise por parte dos professores.
-    \item \textbf{WeasyPrint:} Uma biblioteca que converte HTML e CSS em PDFs, usada para gerar os relatórios de feedback que são enviados aos estudantes por e-mail.
+    \item \textbf{WeasyPrint:} Uma biblioteca que converte HTML e CSS em PDFs, usada para gerar os relatórios de \textit{feedback} que são enviados aos estudantes por e-mail.
 \end{itemize}
 
-Para facilitar o desenvolvimento, implantação e gerenciamento do projeto, todo o sistema foi conteinerizado utilizando Docker e Docker Compose. Esses containers permitem uma configuração consistente e um ambiente isolado para a execução e lançamento (deploy) do projeto, simplificando a gestão e a escalabilidade do sistema. 
+Para facilitar o desenvolvimento, implantação e gerenciamento do projeto, todo o sistema foi conteinerizado utilizando Docker. Esses containers permitem uma configuração consistente e um ambiente isolado para a execução e lançamento (deploy) do projeto, simplificando a gestão e a escalabilidade do sistema. 
 
-A combinação dessas tecnologias permitiu a criação de uma ferramenta eficiente e eficaz para a geração de feedbacks formativos, garantindo um sistema robusto e escalável.
+A combinação dessas tecnologias permitiu a criação de uma ferramenta eficiente e eficaz para a geração de \textit{feedbacks} formativos, garantindo um sistema robusto e escalável.
 
 
 \section{Principais Endpoints}
@@ -74,9 +74,9 @@ Neste projeto, foram desenvolvidos seis endpoints principais, cada um com uma fu
     
     \item \textbf{/api/token/refresh/:} Endpoint para atualização do token de acesso. Quando o token de acesso expira ou está próximo de expirar, este endpoint pode ser utilizado para renovar o token, garantindo que o usuário mantenha o acesso aos serviços.
     
-    \item \textbf{/api/feedback/:} O principal endpoint deste projeto. Este endpoint recebe os dados de um questionário preenchido por um estudante, processa esses dados, gera o feedback formativo e envia um e-mail com o feedback para o estudante correspondente.
+    \item \textbf{/api/\textit{feedback}/:} O principal endpoint deste projeto. Este endpoint recebe os dados de um questionário preenchido por um estudante, processa esses dados, gera o \textit{feedback} formativo e envia um e-mail com o \textit{feedback} para o estudante correspondente.
     
-    \item \textbf{/api/feedback/resend/:} Endpoint para reenvio de feedback formativo. Este endpoint permite que um feedback formativo previamente gerado seja reenviado, mediante a especificação do questionário e das pessoas que devem receber o feedback.
+    \item \textbf{/api/\textit{feedback}/resend/:} Endpoint para reenvio de \textit{feedback} formativo. Este endpoint permite que um \textit{feedback} formativo previamente gerado seja reenviado, mediante a especificação do questionário e das pessoas que devem receber o \textit{feedback}.
     
     \item \textbf{/api/reports/:} Endpoint para envio de relatórios sobre o desempenho da turma de um professor. Com base em um questionário específico, este endpoint gera e envia um relatório detalhado, incluindo notas dos estudantes, porcentagem de acertos por questão e outras estatísticas relevantes.
 \end{itemize}
@@ -87,9 +87,9 @@ Além desses endpoints principais, foi implementado um endpoint adicional para d
     \item \textbf{/swagger/:} Endpoint que fornece uma documentação técnica detalhada de todos os endpoints disponíveis no projeto. Através deste endpoint, é possível visualizar os parâmetros esperados e os possíveis responses para cada endpoint, facilitando a compreensão e integração com a API.
 \end{itemize}
 
-Cada um desses endpoints desempenha um papel crucial no fluxo de funcionamento da ferramenta FeedFor, garantindo desde a administração do sistema até a geração e envio de feedbacks e relatórios detalhados. A documentação técnica acessível pelo endpoint /swagger/ auxilia na integração e uso da API por terceiros. Além disso, no repositório do projeto existe uma pasta com o nome requests examples, dentro dessa pasta existem exemplos de requisições reais para auxliar no uso da ferramenta.
+Cada um desses endpoints desempenha um papel importante no fluxo de funcionamento da ferramenta FeedFor, garantindo desde a administração do sistema até a geração e envio de \textit{feedbacks} e relatórios detalhados. A documentação técnica acessível pelo endpoint /swagger/ auxilia na integração e uso da API por terceiros. Além disso, no repositório do projeto existe uma pasta com o nome requests examples, dentro dessa pasta existem exemplos de requisições reais para auxliar no uso da ferramenta.
 
-Pode ser visualizado esse processo automatizado com detalhes no Anexo II \ref{anexoIIFGAF}.
+Pode ser visualizado esse processo automatizado com detalhes no Anexo II \nameref{anexoIIFGAF}.
 
 \section{Banco de Dados e Modelagem}
 
@@ -101,21 +101,21 @@ Na primeira fase do projeto, o banco de dados era limitado a três tabelas: Estu
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figuras/bd-phase1.jpeg}
     \caption{Modelo de Banco de Dados - Primeira Fase}
+    \includegraphics[width=0.8\textwidth]{figuras/bd-phase1.jpeg}
     \label{fig:first_phase}
 \end{figure}
 
-O principal problema da primeira fase era a não reutilização dos feedbacks para cada questão. Quando uma resposta errada era recebida, uma nova requisição era feita à API da OpenAI para gerar o feedback, o que resultava em múltiplas requisições idênticas para a mesma questão em uma sala com muitos estudantes.
+O principal problema da primeira fase era a não reutilização dos \textit{feedbacks} para cada questão. Quando uma resposta errada era recebida, uma nova requisição era feita à API da OpenAI para gerar o \textit{feedback}, o que resultava em múltiplas requisições idênticas para a mesma questão em uma sala com muitos estudantes.
 
 \subsection{Segunda Fase}
 
-Na segunda fase, foi criada uma tabela adicional de Respostas para armazenar os feedbacks gerados para respostas incorretas, evitando requisições redundantes à API da OpenAI. Além disso, alguns relacionamentos foram ajustados para suportar essa nova funcionalidade.
+Na segunda fase, foi criada uma tabela adicional de Respostas para armazenar os \textit{feedbacks} gerados para respostas incorretas, evitando requisições redundantes à API da OpenAI. Além disso, alguns relacionamentos foram ajustados para suportar essa nova funcionalidade.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figuras/bd-phase2.jpeg}
     \caption{Modelo de Banco de Dados - Segunda Fase}
+    \includegraphics[width=0.8\textwidth]{figuras/bd-phase2.jpeg}
     \label{fig:second_phase}
 \end{figure}
 
@@ -127,8 +127,8 @@ Na terceira fase, foram feitos ajustes nos relacionamentos e adicionadas novas t
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/bd-phase3.png}
     \caption{Modelo de Banco de Dados - Terceira Fase}
+    \includegraphics[width=1\textwidth]{figuras/bd-phase3.png}
     \label{fig:third_phase}
 \end{figure}
 
@@ -137,12 +137,12 @@ Para acessar o modelo dessa terceira fase basta acessar o link: \href{https://lu
 \subsection{Explicação das Tabelas}
 
 \begin{itemize}
-    \item \textbf{Estudante (Student):} Armazena informações dos estudantes, sendo crucial o email para o envio dos feedbacks formativos.
-    \item \textbf{Professor (Teacher):} Armazena informações dos professores, incluindo o email para receber relatórios de questionários e visualizar os feedbacks recebidos pelos estudantes.
-    \item \textbf{Matéria (Subject):} Armazena informações das matérias, ajudando a separar os contextos dos questionários e relacionando-se com as configurações do chat para determinar como os feedbacks serão gerados para aquela matéria.
-    \item \textbf{Questionário (Questionnaire):} Armazena informações sobre os questionários realizados, incluindo o ID externo usado para regenerar feedbacks específicos.
-    \item \textbf{Item (Item):} Armazena informações sobre as perguntas das questões, incluindo o conteúdo e a resposta correta, essenciais para contextualizar o feedback gerado pela API da OpenAI, conseguindo distinguir qual tipo de questão se trata a partir do tipo da variável recebida na requisição.
-    \item \textbf{Resposta (Answer):} Armazena informações sobre as respostas dos estudantes, indicando se estão corretas ou não e, se incorretas, os feedbacks gerados, permitindo a reutilização futura do feedback.
+    \item \textbf{Estudante (Student):} Armazena informações dos estudantes, sendo essencial o email para o envio dos \textit{feedbacks} formativos.
+    \item \textbf{Professor (Teacher):} Armazena informações dos professores, incluindo o email para receber relatórios de questionários e visualizar os \textit{feedbacks} recebidos pelos estudantes.
+    \item \textbf{Matéria (Subject):} Armazena informações das matérias, ajudando a separar os contextos dos questionários e relacionando-se com as configurações do chat para determinar como os \textit{feedbacks} serão gerados para aquela matéria.
+    \item \textbf{Questionário (Questionnaire):} Armazena informações sobre os questionários realizados, incluindo o ID externo usado para regenerar \textit{feedbacks} específicos.
+    \item \textbf{Item (Item):} Armazena informações sobre as perguntas das questões, incluindo o conteúdo e a resposta correta, essenciais para contextualizar o \textit{feedback} gerado pela API da OpenAI, conseguindo distinguir qual tipo de questão se trata a partir do tipo da variável recebida na requisição.
+    \item \textbf{Resposta (Answer):} Armazena informações sobre as respostas dos estudantes, indicando se estão corretas ou não e, se incorretas, os \textit{feedbacks} gerados, permitindo a reutilização futura do \textit{feedback}.
     \item \textbf{Resultado (Result):} Armazena a pontuação obtida por um estudante em um questionário.
     \item \textbf{Configurações do Chat (ChatSettings):} Armazena configurações do modelo requisitado na API da OpenAI, como a versão do modelo, temperatura, token de acesso à API e outras configurações técnicas.
 \end{itemize}
@@ -155,8 +155,8 @@ No entanto, ao longo do desenvolvimento do projeto, e após a saída de um dos d
 
 \begin{itemize}
     \item \textbf{Camada de Acesso a Dados:} Responsável por interagir com o banco de dados. Essa camada é encarregada de realizar operações de leitura e escrita nos dados, garantindo que as regras de negócio não sejam diretamente afetadas pelas operações de armazenamento.
-    \item \textbf{Camada de Processamento Interno:} Encarregada de implementar a lógica de negócios da aplicação. Esta camada processa as informações recebidas e realiza as operações necessárias para gerar o feedback formativo, isolando a lógica de negócio da camada de acesso a dados e das comunicações externas.
-    \item \textbf{Camada de Comunicação Externa:} Responsável por interagir com sistemas externos, como APIs externas e serviços de email. Esta camada gerencia as requisições a serviços externos, como a API da OpenAI para geração de feedbacks e o envio de emails para os estudantes.
+    \item \textbf{Camada de Processamento Interno:} Encarregada de implementar a lógica de negócios da aplicação. Esta camada processa as informações recebidas e realiza as operações necessárias para gerar o \textit{feedback} formativo, isolando a lógica de negócio da camada de acesso a dados e das comunicações externas.
+    \item \textbf{Camada de Comunicação Externa:} Responsável por interagir com sistemas externos, como APIs externas e serviços de email. Esta camada gerencia as requisições a serviços externos, como a API da OpenAI para geração de \textit{feedbacks} e o envio de emails para os estudantes.
 \end{itemize}
 
 A Arquitetura em Camadas foi escolhida devido à sua simplicidade e adequação ao contexto do projeto após a mudança na equipe. Embora não ofereça a mesma flexibilidade e independência da Arquitetura Limpa, ela permite uma organização clara das responsabilidades e facilita a manutenção e evolução da aplicação com a equipe reduzida.
@@ -171,8 +171,8 @@ O principal custo associado ao FeedFor é o uso da OpenAI API, que não é mais 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figuras/cost_openai.png}
     \caption{Dashboard de Custos da OpenAI API}
+    \includegraphics[width=0.8\textwidth]{figuras/cost_openai.png}
     \label{fig:first_phase}
 \end{figure}
 
@@ -182,19 +182,19 @@ Vale destacar que durante os testes, mais da metade dos gastos foram com o model
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figuras/cost_gpt_35.png}
     \caption{Dashboard de Custos do modelo GPT-3.5-turbo}
+    \includegraphics[width=0.8\textwidth]{figuras/cost_gpt_35.png}
     \label{fig:first_phase}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figuras/cost_gpt_4o.png}
     \caption{Dashboard de Custos do modelo GPT-4o}
+    \includegraphics[width=0.8\textwidth]{figuras/cost_gpt_4o.png}
     \label{fig:first_phase}
 \end{figure}
 
-Inicialmente, o custo pode ser um pouco mais alto devido ao fato de que nenhuma questão terá um feedback pré-preenchido. Cada nova resposta errada gera uma nova requisição à API. No entanto, com o tempo, à medida que mais feedbacks forem gerados e armazenados, o número de novas requisições será reduzido, resultando em uma diminuição significativa dos custos operacionais.
+Inicialmente, o custo pode ser um pouco mais alto devido ao fato de que nenhuma questão terá um \textit{feedback} pré-preenchido. Cada nova resposta errada gera uma nova requisição à API. No entanto, com o tempo, à medida que mais \textit{feedbacks} forem gerados e armazenados, o número de novas requisições será reduzido, resultando em uma diminuição significativa dos custos operacionais.
 
 \subsection{Custo de Hospedagem}
 
@@ -210,11 +210,11 @@ Em resumo, os custos do projeto FeedFor são relativamente baixos, especialmente
 
 \section{Uso da OpenAI API}
 
-A OpenAI API é uma peça fundamental do projeto FeedFor, utilizada para gerar feedbacks formativos para as respostas dos estudantes. A seguir, detalhamos como a API é empregada e os desafios enfrentados durante sua integração.
+A OpenAI API é uma peça fundamental do projeto FeedFor, utilizada para gerar \textit{feedbacks} formativos para as respostas dos estudantes. A seguir, detalhamos como a API é empregada e os desafios enfrentados durante sua integração.
 
-\subsection{Geração de Feedbacks}
+\subsection{Geração de \textit{feedbacks}}
 
-A OpenAI API é acionada sempre que uma nova resposta incorreta é recebida e não está previamente armazenada no banco de dados. Dependendo do tipo de questão (múltipla escolha, aberta e múltiplas respostas corretas), o prompt enviado para a API varia para garantir a melhor contextualização possível. Essa abordagem foi desenvolvida após centenas de testes para otimizar a qualidade dos feedbacks gerados, inicialmente era planejado usar o mesmo prompt, mas com os testes foi identificado uma melhora ao descrever melhor cada contexto.
+A OpenAI API é acionada sempre que uma nova resposta incorreta é recebida e não está previamente armazenada no banco de dados. Dependendo do tipo de questão (múltipla escolha, aberta e múltiplas respostas corretas), o prompt enviado para a API varia para garantir a melhor contextualização possível. Essa abordagem foi desenvolvida após centenas de testes para otimizar a qualidade dos \textit{feedbacks} gerados, inicialmente era planejado usar o mesmo prompt, mas com os testes foi identificado uma melhora ao descrever melhor cada contexto.
 
 \subsubsection{Questões de Múltipla Escolha e Abertas}
 
@@ -246,11 +246,11 @@ Para questões que permitem múltiplas respostas corretas, o prompt inclui:
 
 - \textbf{Subconteúdo da Questão:} Detalhes adicionais sobre a questão.
 
-Este prompt solicita um feedback detalhado sobre as respostas fornecidas, dividido em \textit{Explicação} e \textit{Sugestões de Aperfeiçoamento}, considerando as respostas e o conteúdo associado à questão.
+Este prompt solicita um \textit{feedback} detalhado sobre as respostas fornecidas, dividido em \textit{Explicação} e \textit{Sugestões de Aperfeiçoamento}, considerando as respostas e o conteúdo associado à questão.
 
 \subsection{Escolha de Modelos}
 
-Durante o desenvolvimento, observou-se que o modelo GPT-3.5-turbo, embora eficiente para questões com múltiplas respostas corretas, foi superado pelo modelo mais recente da OpenAI em termos de qualidade de feedback. Portanto, o líder da disciplina pode escolher qual modelo utilizar para cada tipo de questão. A modelagem dos dados, como descrito na seção de Banco de Dados, inclui o campo \texttt{special\_model} na tabela \texttt{ChatSettings}, que permite selecionar um modelo diferente para questões com múltiplas respostas corretas, se desejado.
+Durante o desenvolvimento, observou-se que o modelo GPT-3.5-turbo, embora eficiente para questões com múltiplas respostas corretas, foi superado pelo modelo mais recente da OpenAI em termos de qualidade de \textit{feedback}. Portanto, o líder da disciplina pode escolher qual modelo utilizar para cada tipo de questão. A modelagem dos dados, como descrito na seção de Banco de Dados, inclui o campo \texttt{special\_model} na tabela \texttt{ChatSettings}, que permite selecionar um modelo diferente para questões com múltiplas respostas corretas, se desejado.
 
 \subsection{Configurações e Desafios}
 
@@ -260,49 +260,49 @@ Alguns desafios foram enfrentados ao trabalhar com a OpenAI API:
 
 - \textbf{Formatação de Respostas:} Para evitar problemas com caracteres especiais e formatação inadequada, são incluídas instruções específicas no prompt para assegurar que as respostas sejam claras e formatadas corretamente.
 
-- \textbf{Controle de Tokens:} A quantidade de tokens na resposta pode variar. Para garantir que o feedback não seja cortado abruptamente, é enviado um limite de tokens definidos na tabela \texttt{ChatSettings} mais 50 (200 tokens definidos + 50 tokens adicionais por exemplo), ajustando automaticamente para evitar cortes indesejados.
+- \textbf{Controle de Tokens:} A quantidade de tokens na resposta pode variar. Para garantir que o \textit{feedback} não seja cortado abruptamente, é enviado um limite de tokens definidos na tabela \texttt{ChatSettings} mais 50 (200 tokens definidos + 50 tokens adicionais por exemplo), ajustando automaticamente para evitar cortes indesejados.
 
-Esses ajustes e configurações foram desenvolvidos para aprimorar a eficácia da API e garantir que os feedbacks gerados atendam às necessidades do projeto FeedFor.
+Esses ajustes e configurações foram desenvolvidos para aprimorar a eficácia da API e garantir que os \textit{feedbacks} gerados atendam às necessidades do projeto FeedFor.
 
-\section{Definição do Template do Feedback Formativo}
+\section{Definição do Template do \textit{feedback} Formativo}
 
-O Feedback Formativo é um componente crucial para o aprendizado dos estudantes, proporcionando informações detalhadas sobre suas respostas e orientações para melhorar seu desempenho. O desenvolvimento do template do feedback passou por várias fases, e a versão final foi definida com base em avaliações de profissionais da área da educação e especialistas em atendimento a pessoas com transtornos do neurodesenvolvimento.
+O \textit{feedback} Formativo é um componente importante para o aprendizado dos estudantes, proporcionando informações detalhadas sobre suas respostas e orientações para melhorar seu desempenho. O desenvolvimento do template do \textit{feedback} passou por várias fases, e a versão final foi definida com base em avaliações de profissionais da área da educação e especialistas em atendimento a pessoas com transtornos do neurodesenvolvimento.
 
-\subsection{Exemplos de Feedback Formativo e Relatórios de Desempenho}
+\subsection{Exemplos de \textit{feedback} Formativo e Relatórios de Desempenho}
 
-A seguir, são apresentadas três imagens exemplificando o formato final do Feedback Formativo recebido pelos estudantes e o relatório de desempenho recebido pelos professores:
+A seguir, são apresentadas três imagens exemplificando o formato final do \textit{feedback} Formativo recebido pelos estudantes e o relatório de desempenho recebido pelos professores:
 
 \begin{figure}[H]
     \centering
+    \caption{Exemplo de \textit{feedback} Formativo - Questão Errada}
     \includegraphics[width=1\textwidth]{figuras/feedback-example1.png}
-    \caption{Exemplo de Feedback Formativo - Questão Errada}
     \label{fig:feedback_example1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
+    \caption{Exemplo de \textit{feedback} Formativo - Questão Correta}
     \includegraphics[width=1\textwidth]{figuras/feedback-example2.png}
-    \caption{Exemplo de Feedback Formativo - Questão Correta}
     \label{fig:feedback_example2}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/report.png}
     \caption{Exemplo de Relatório de Desempenho - Alunos}
+    \includegraphics[width=1\textwidth]{figuras/report.png}
     \label{fig:report}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figuras/report_questions.png}
     \caption{Exemplo de Relatório de Desempenho - Questões}
+    \includegraphics[width=1\textwidth]{figuras/report_questions.png}
     \label{fig:report_questions}
 \end{figure}
 
-Pode ser visualizado mais exemplos de Feedbacks gerados no Anexo III \ref{anexoIIIEFFG}.
+Pode ser visualizado mais exemplos de \textit{feedbacks} gerados no Anexo III \nameref{anexoIIIEFFG}.
 
-\subsection{Design e Cores do Feedback}
+\subsection{Design e Cores do \textit{feedback}}
 
 Para garantir uma comunicação clara e intuitiva, foram selecionadas cores específicas para representar a correção das respostas:
 
@@ -312,9 +312,9 @@ Para garantir uma comunicação clara e intuitiva, foram selecionadas cores espe
 
 Quando uma questão permite múltiplas respostas, as cores podem aparecer simultaneamente para distinguir entre respostas corretas e incorretas.
 
-\subsection{Estrutura do Feedback}
+\subsection{Estrutura do \textit{feedback}}
 
-A estrutura do feedback foi cuidadosamente elaborada para facilitar a compreensão e a leitura dos estudantes. O template final foi definido da seguinte forma:
+A estrutura do \textit{feedback} foi cuidadosamente elaborada para facilitar a compreensão e a leitura dos estudantes. O template final foi definido da seguinte forma:
 
 1. \textbf{Resposta Correta:} A(s) resposta(s) correta(s) é(são) exibida(s) primeiramente, para que o estudante saiba o que deveria ter sido a resposta correta.
 
@@ -322,23 +322,23 @@ A estrutura do feedback foi cuidadosamente elaborada para facilitar a compreens�
 
 3. \textbf{Sugestões de Aperfeiçoamento:} Em seguida, são apresentadas sugestões específicas sobre o que o estudante pode estudar ou melhorar para evitar erros semelhantes no futuro. Essas sugestões são separadas em textos curtos para facilitar a leitura e a compreensão.
 
-O tamanho das respostas foi definido para ter um máximo de \textbf{200 tokens}. Esse limite foi escolhido com base em testes e avaliações de usabilidade, considerando que 200 tokens representam um tamanho adequado para a leitura e compreensão dos estudantes, proporcionando um feedback claro e conciso sem sobrecarregar o estudante com informações excessivas, porém, se o professor desejar maiores feedbacks também é possível.
+O tamanho das respostas foi definido para ter um máximo de \textbf{200 tokens}. Esse limite foi escolhido com base em testes e avaliações de usabilidade, considerando que 200 tokens representam um tamanho adequado para a leitura e compreensão dos estudantes, proporcionando um \textit{feedback} claro e conciso sem sobrecarregar o estudante com informações excessivas, porém, se o professor desejar maiores \textit{feedbacks} também é possível.
 
 A separação dos textos em respostas corretas, explicações e sugestões visa incentivar a leitura e a assimilação de informações mais curtas e objetivas, especialmente para estudantes que podem precisar de uma abordagem mais direta para absorver o conteúdo.
 
-Este formato foi escolhido para maximizar a eficácia do feedback formativo, ajudando os estudantes a identificar e corrigir suas falhas de forma clara e prática.
+Este formato foi escolhido para maximizar a eficácia do \textit{feedback} formativo, ajudando os estudantes a identificar e corrigir suas falhas de forma clara e prática.
 
 \section{Conexão com Aplicações Externas e Automação}
 
-No desenvolvimento do projeto FeedFor, um aspecto fundamental é a capacidade de se conectar com aplicações externas para automatizar o processo de envio de feedbacks aos estudantes. A automatização da API FeedFor pode ser realizada com diversos sistemas, porém, os métodos mais explorados foram através do Microsoft Power Automate e do Excel no OneDrive.
+No desenvolvimento do projeto FeedFor, um aspecto fundamental é a capacidade de se conectar com aplicações externas para automatizar o processo de envio de \textit{feedbacks} aos estudantes. A automatização da API FeedFor pode ser realizada com diversos sistemas, porém, os métodos mais explorados foram através do Microsoft Power Automate e do Excel no OneDrive.
 
-No Microsoft Power Automate, é possível criar fluxos com outras ferramentas da Microsoft para automatizar processos. O ideal é criar os questionários usando o Microsoft Forms e, em seguida, ligar esse questionário com um serviço de requisição HTTP (existem vários dentro da plataforma Microsoft Power Automate, sendo necessário apenas ter as permissões adequadas). Assim que um usuário completa o questionário, uma requisição HTTP é enviada automaticamente para nossa ferramenta conforme configurado na plataforma. Ao chegar no FeedFor, a requisição é processada e o feedback é enviado para o e-mail do estudante associado ao questionário.
+No Microsoft Power Automate, é possível criar fluxos com outras ferramentas da Microsoft para automatizar processos. O ideal é criar os questionários usando o Microsoft Forms e, em seguida, ligar esse questionário com um serviço de requisição HTTP (existem vários dentro da plataforma Microsoft Power Automate, sendo necessário apenas ter as permissões adequadas). Assim que um usuário completa o questionário, uma requisição HTTP é enviada automaticamente para nossa ferramenta conforme configurado na plataforma. Ao chegar no FeedFor, a requisição é processada e o \textit{feedback} é enviado para o e-mail do estudante associado ao questionário.
 
-Pode ser visualizado esse processo automatizado com detalhes no Anexo I \ref{anexoITIMPA}.
+Pode ser visualizado esse processo automatizado com detalhes no Anexo I \nameref{anexoITIMPA}.
 
 Outra forma de conseguir essa automatização é por meio do acesso ao Excel através da API do OneDrive para consumir dados da planilha de questionários que é atualizada automaticamente pelo Microsoft Forms. Embora também sejam necessárias permissões, essa abordagem elimina a necessidade de qualquer configuração no Microsoft Power Automate.
 
-Além disso, qualquer serviço externo de questionários, como aplicativos utilizados em disciplinas com avaliações, pode ser integrado na API do FeedFor. Usando as rotas disponibilizadas e enviando as informações necessárias, os estudantes recebem automaticamente o feedback no e-mail.
+Além disso, qualquer serviço externo de questionários, como aplicativos utilizados em disciplinas com avaliações, pode ser integrado na API do FeedFor. Usando as rotas disponibilizadas e enviando as informações necessárias, os estudantes recebem automaticamente o \textit{feedback} no e-mail.
 
 \section{Ideias Descartadas e Potenciais para Evolução}
 
@@ -346,7 +346,7 @@ Durante o desenvolvimento do projeto FeedFor, diversas ideias e recursos foram c
 
 \subsection{Utilização de Assistentes da OpenAI API}
 
-Uma das ideias descartadas foi a utilização de assistentes da OpenAI API que, conforme a documentação da plataforma, permite o upload de documentos, como imagens ou PDFs, para usar como base para a interação com os estudantes. A proposta era integrar esse recurso para fornecer feedbacks ainda mais personalizados, baseados em materiais específicos da disciplina fornecidos pelos professores.
+Uma das ideias descartadas foi a utilização de assistentes da OpenAI API que, conforme a documentação da plataforma, permite o upload de documentos, como imagens ou PDFs, para usar como base para a interação com os estudantes. A proposta era integrar esse recurso para fornecer \textit{feedbacks} ainda mais personalizados, baseados em materiais específicos da disciplina fornecidos pelos professores.
 
 Durante o desenvolvimento, foram encontradas várias dificuldades com essa abordagem:
 
@@ -354,17 +354,17 @@ Durante o desenvolvimento, foram encontradas várias dificuldades com essa abord
 
 - \textbf{Armazenamento e Custo:} Manter a conectividade constante com o assistente para garantir que as informações dos documentos fossem preservadas seria custoso e complexo, o que não justificava os benefícios no contexto do projeto.
 
-Embora esse recurso estivesse em fase beta durante o desenvolvimento, e tenha mostrado potencial para uma personalização ainda mais aprofundada dos feedbacks, os desafios encontrados levaram à decisão de optar por uma abordagem mais direta e confiável.
+Embora esse recurso estivesse em fase beta durante o desenvolvimento, e tenha mostrado potencial para uma personalização ainda mais aprofundada dos \textit{feedbacks}, os desafios encontrados levaram à decisão de optar por uma abordagem mais direta e confiável.
 
 \subsection{Implementação e Configuração dos Assistentes}
 
 Durante o desenvolvimento, a comunicação da aplicação com a OpenAI API foi completamente implementada, permitindo a criação, edição e exclusão de assistentes diretamente pela página de administração do FeedFor. Foi possível também realizar o upload de documentos para esses assistentes.
 
-No entanto, essa funcionalidade foi removida do projeto final, pois não ofereceu vantagens significativas em relação ao uso do Chat normal, que já proporcionava o feedback necessário de forma eficiente e confiável.
+No entanto, essa funcionalidade foi removida do projeto final, pois não ofereceu vantagens significativas em relação ao uso do Chat normal, que já proporcionava o \textit{feedback} necessário de forma eficiente e confiável.
 
 \subsection{Potenciais para Futuras Versões}
 
-Apesar das dificuldades enfrentadas com o recurso de assistentes, ele representa uma área promissora para futuras evoluções do projeto. Em versões posteriores, se melhorias forem implementadas na manutenção de estado e conectividade ou armazenamento de chats anteriores, o uso de assistentes com documentos personalizados pode adicionar um valor significativo ao FeedFor. A capacidade de fornecer feedbacks baseados em materiais específicos da matéria, como notas de aula e PDFs, poderia enriquecer ainda mais a experiência de aprendizado dos estudantes.
+Apesar das dificuldades enfrentadas com o recurso de assistentes, ele representa uma área promissora para futuras evoluções do projeto. Em versões posteriores, se melhorias forem implementadas na manutenção de estado e conectividade ou armazenamento de chats anteriores, o uso de assistentes com documentos personalizados pode adicionar um valor significativo ao FeedFor. A capacidade de fornecer \textit{feedbacks} baseados em materiais específicos da matéria, como notas de aula e PDFs, poderia enriquecer ainda mais a experiência de aprendizado dos estudantes.
 
 O acompanhamento das atualizações e melhorias nas APIs e recursos da OpenAI, bem como a adaptação das soluções tecnológicas à medida que o projeto evolui, pode abrir novas possibilidades para incorporar essas ideias descartadas de maneira eficiente e benéfica.
 
